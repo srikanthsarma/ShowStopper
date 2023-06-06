@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.showContainer {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.showCard {
+  width: 100%;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.showCard label {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+.showCard label p {
+  font-size: 1rem;
+  margin: 0;
+}
+.showCard label button {
+  font: inherit;
+}
+.showCard img {
+  width: 100%;
+  height: 100%;
+}
+.showCard:hover label {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Modal .ModalBody img {
+  float: left;
+  width: 50%;
+}
+.Modal .ModalBody .summary {
+  float: right;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.form {
+  background-color: aqua;
+}/*# sourceMappingURL=App.css.map */

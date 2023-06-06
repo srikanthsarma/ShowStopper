@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.showContainer {
+    display: grid;
+    gap: 1rem;
+    padding: .5rem;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.showCard {
+    width: 100%;
+    position: relative;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    label {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+
+        width: 100%;
+        padding: 1rem;
+
+        font-size: 2rem;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.75);
+
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        button {
+            font: inherit;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        label {
+            opacity: 1;
+        }
+    }
+}
+
+.Modal{
+    
+    .ModalBody {
+        
+        img {
+            float: left;
+            width: 50%;
+        }
+        // .thumbnailText {
+        //     height: inherit;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-items: center;
+        //     align-items: center;
+        // }
+        .summary {
+            float: right;
+        }
+    }
+}
+
+
+.form {
+    background-color: aqua;
+}
