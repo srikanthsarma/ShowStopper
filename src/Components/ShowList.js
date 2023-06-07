@@ -8,7 +8,6 @@ function ShowList() {
     useEffect(() => {
         axios.get('https://api.tvmaze.com/search/shows?q=all')
         .then(res => {
-            // console.log(res)
             setdata(res.data)
         })
         .catch(err => {
